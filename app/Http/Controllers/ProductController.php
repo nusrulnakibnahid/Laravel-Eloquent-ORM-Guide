@@ -148,10 +148,19 @@ class ProductController extends Controller
 
        // $products = Product::whereColumn('price','>', 'purches_price')->get();
        
-       $products = Product::find(8);
-       $products->increment('purches_price', 100);
-       $products->decrement('price', 50);
-       return $products;
+      // $products = Product::find(8);
+     // $products->increment('purches_price', 100);
+     // $products->decrement('price', 50);
+     //return $products;
+
+     // $products = Product::where(8)->first();
+
+     $products = Product::select('id', 'name')->get();
+
+     return $products;
+
+
+       
 
     }
 
