@@ -146,10 +146,16 @@ class ProductController extends Controller
 
        // $products = Product::where('name', 'Test4')->orWhere('description', 'Test5')->get();
 
-       $products = Product::whereColumn('price','>', 'purches_price')->get();
+       // $products = Product::whereColumn('price','>', 'purches_price')->get();
+       
+       $products = Product::find(8);
+       $products->increment('purches_price', 100);
        return $products;
 
     }
+
+
+    
 
 
     
