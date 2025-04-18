@@ -150,6 +150,7 @@ class ProductController extends Controller
        
        $products = Product::find(8);
        $products->increment('purches_price', 100);
+       $products->decrement('price', 50);
        return $products;
 
     }
