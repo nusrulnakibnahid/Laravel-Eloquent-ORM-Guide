@@ -11,4 +11,23 @@ class ProductController extends Controller
         $products = DB::table('products')->get();
         return $products;
     }
+
+
+
+
+    public function getProductByModel(){
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 }
