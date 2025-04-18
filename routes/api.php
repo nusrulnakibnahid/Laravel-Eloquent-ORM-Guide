@@ -11,3 +11,5 @@ Route::get('/user', function (Request $request) {
 Route::post('/dataInsert', [ProductController::class, 'dataInsert']);
 
 Route::post('/dataInsertByCreate', [ProductController::class, 'dataInsertByCreate']);
+
+Route::post('/dataInsertByCreateReqAll', [ProductController::class, 'dataInsertByCreateReqAll']);
