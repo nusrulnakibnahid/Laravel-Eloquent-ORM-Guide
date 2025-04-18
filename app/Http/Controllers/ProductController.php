@@ -138,6 +138,15 @@ class ProductController extends Controller
     }
 
 
+
+    public function dataSelect(){
+        $products = Product::all();
+
+        return $products;
+
+    }
+
+
     
 
 
