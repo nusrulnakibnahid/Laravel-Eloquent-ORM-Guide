@@ -140,7 +140,11 @@ class ProductController extends Controller
 
 
     public function dataSelect(){
-        $products = Product::all();
+       // $products = Product::all();
+
+       // $products = Product::where('name', 'Test2')->where()->get();
+
+        $products = Product::where('name', 'Test4')->orWhere('description', 'Test5')->get();
 
         return $products;
 
