@@ -76,6 +76,68 @@ class ProductController extends Controller
     }
 
 
+
+    public function dataUpdate(Request $request, $id){
+        Product::where('id')->update([
+
+            'name' => $request->name,
+            'description' => $request->description,
+            'price' => $request->price,
+
+        ]);
+
+        return response()->json([
+            'message' => 'Product updated successfully',
+            
+        ], 202);
+
+    }
+
+
+    public function updatedUsingSave(Request $request, $id){
+
+        $product = Product::find($id);
+        $product->name = $request->name;
+        $product->description = $request->description;
+        $product->price = $request->price;
+        $product->save();
+
+        return response()->json([
+            'message' => 'Product saving successfully',
+            
+        ], 203);
+
+    }
+
+
+
+    public function deleteUsingFind($id){
+
+        $product = Product::find($id);
+        $product->delete();
+
+        return response()->json([
+            'message' => 'Product deleted successfully',
+            
+        ], 204);
+
+    }
+
+
+
+
+    public function deleteUsingDestroyById($id){
+
+       Product::destroy($id);
+
+        return response()->json([
+            'message' => 'Product destroyed successfully',
+            
+        ], 205);
+
+    }
+
+
     
 
 
@@ -95,4 +157,4 @@ class ProductController extends Controller
 
 
 
-}
+} 

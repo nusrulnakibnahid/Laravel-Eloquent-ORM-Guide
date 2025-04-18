@@ -17,5 +17,13 @@ Route::post('/dataInsertByCreateReqAll', [ProductController::class, 'dataInsertB
 
 Route::get('/dataInsertByInsert', [BatchSixController::class, 'dataInsertByInsert']);
 
+Route::post('/dataUpdate/{id}', [ProductController::class, 'dataUpdate']);
 
+Route::post('/updatedUsingSave/{id}', [ProductController::class, 'updatedUsingSave']);
+
+
+Route::delete('/deleteUsingFind/{id}', [ProductController::class, 'deleteUsingFind']);
+
+
+Route::delete('/deleteUsingDestroyById/{id}', [ProductController::class, 'deleteUsingDestroyById']);
 
