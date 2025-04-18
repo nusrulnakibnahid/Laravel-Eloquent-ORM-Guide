@@ -15,3 +15,5 @@ Route::get('/getProductByModel', [ProductController::class,'getProductByModel'])
 Route::get('/getFromNahidTest', [ProductController::class,'getFromNahidTest']);
 
 Route::get('/getStudent',[BatchSixController::class,'getStudent']);
+
+// Route::get('/dataInsert',[ProductController::class,'dataInsert']);
