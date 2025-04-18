@@ -144,12 +144,15 @@ class ProductController extends Controller
 
        // $products = Product::where('name', 'Test2')->where()->get();
 
-        $products = Product::where('name', 'Test4')->orWhere('description', 'Test5')->get();
+       // $products = Product::where('name', 'Test4')->orWhere('description', 'Test5')->get();
 
-        return $products;
+       $products = Product::whereColumn('price','>', 'purches_price')->get();
+       return $products;
 
     }
 
+
+    
 
     
 
